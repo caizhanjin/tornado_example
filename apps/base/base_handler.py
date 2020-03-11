@@ -11,7 +11,7 @@ class NoResultError(Exception):
     pass
 
 
-class BaseHandler(tornado.web.RequestHandler, ABC):
+class BaseHandler(tornado.web.RequestHandler):
     """A class to collect common handler methods - all other apps should
     subclass this one.
     """

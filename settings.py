@@ -10,7 +10,7 @@ from libs.db.oracle import DbOracle
 # 编码设置
 os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 
-define("port", default=8000, help="Run server on a specific port", type=int)
+define("port", default=8001, help="Run server on a specific port", type=int)
 define("host", default="localhost", help="Run server on a specific host")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -47,7 +47,7 @@ TEMPLATE_PAT = os.path.join(BASE_DIR, 'templates')
 settings = {
     "debug": DEBUG,
     "static_path": MEDIA_PAT,
-    "cookie_secret": "bZJc2sWbQLKos6GkHn/VB9oXwQt8S0R0kRvJ5/xJ89E=",
+    "cookie_secret": "xhIBBR2lSp2Pfpx4iiIyX/X6K9j7VUB9oNeA+YdS+ng=",
     "xsrf_cookies": True,
 }
 

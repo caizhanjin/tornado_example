@@ -6,6 +6,8 @@ pip install -r requirements.txt
 python server.py
 ```
 
+[官方学习文档](https://www.osgeo.cn/tornado/index.html)
+
 ## 项目结构
 tornado项目实践方案
 有参考：[github地址](https://github.com/baqmxdsny/tornado_demo)
@@ -31,3 +33,4 @@ tornado项目实践方案
 + docs（项目文档/说明）
 + static（静态文件，存放js 、css 、html、img）
 + templates（模板，放html页面）
+

@@ -1,3 +1,5 @@
+from abc import ABC
+
 import tornado.web
 from tornado.escape import json_encode
 

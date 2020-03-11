@@ -2,7 +2,7 @@ import tornado.web
 
 from abc import ABC
 from tornado.escape import json_encode
-from apps.user.model import UserModel
+from apps.resful.model import UserModel
 from apps.base.base_handler import BaseHandler
 
 
