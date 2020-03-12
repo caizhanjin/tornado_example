@@ -25,23 +25,23 @@ if environment == "production":
     print('生产环境！！！')
     DEBUG = False
     DB_ORACLE = {
-        'USER': 'tdms',
-        'PASSWORD': 'swd_2019_tdms1314',
-        'NAME': 'orcl',
-        'HOST': '172.30.201.21',
-        'PORT': '1521',
-        'charset': 'utf8'
+        'USER': '',
+        'PASSWORD': '',
+        'NAME': '',
+        'HOST': '',
+        'PORT': '',
+        'charset': ''
     }
 else:
     print('开发环境...')
     DEBUG = True
     DB_ORACLE = {
-        'USER': 'tdms',
-        'PASSWORD': 'swd2018tdms',
-        'NAME': 'orcl',
-        'HOST': '172.30.201.56',
-        'PORT': '1521',
-        'charset': 'utf8'
+        'USER': '',
+        'PASSWORD': '',
+        'NAME': '',
+        'HOST': '',
+        'PORT': '',
+        'charset': ''
     }
 
 # the application settings
