@@ -1,20 +1,39 @@
 import json
 from abc import ABC
 
+import tornado.websocket
 import tornado.web
+import urllib
 
 import logging
-logger = logging.getLogger('boilerplate.' + __name__)
+logger = logging.getLogger(__name__)
+
+
+class BaseWebsocketHandler(tornado.websocket.WebSocketHandler, ABC):
+    """
+    websocket基类，添加远端过滤
+    """
+    def check_origin(self, origin):
+        allow_urls = [
+            "localhost:8080",
+            "127.0.01:8080",
+        ]
+
+        parsed_origin = urllib.parse.urlparse(origin)
+        parsed_netloc = parsed_origin.netloc
+
+        for item in allow_urls:
+            if parsed_netloc.endswith(item):
+                return True
+
+        return False
 
 
 class NoResultError(Exception):
     pass
 
 
-class BaseHandler(tornado.web.RequestHandler):
-    """A class to collect common handler methods - all other apps should
-    subclass this one.
-    """
+class BaseHandler(tornado.web.RequestHandler, ABC):
 
     def load_json(self):
         """Load JSON from the request body and store them in

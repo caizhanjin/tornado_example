@@ -1,3 +1,6 @@
+import logging
+db_logger = logging.getLogger("db_logger")
+
 
 class DbBase(object):
 
@@ -20,7 +23,7 @@ class DbBase(object):
             result = self.cursor.fetchone()
             self.close()
         except Exception as error:
-            print(f"fail to select, error:{error}")
+            db_logger.error(f"fail to select, error:{error}", exc_info=True)
 
         return result
 
@@ -32,7 +35,7 @@ class DbBase(object):
             result = self.cursor.fetchall()
             self.close()
         except Exception as error:
-            print(f"fail to select, error:{error}")
+            db_logger.error(f"fail to select, error:{error}", exc_info=True)
 
         return result
 
@@ -78,7 +81,7 @@ class DbBase(object):
             self.close()
 
         except Exception as error:
-            print(f"fail to select, error:{error}")
+            db_logger.error(f"fail to select, error:{error}", exc_info=True)
             self.db.rollback()
 
         return count
