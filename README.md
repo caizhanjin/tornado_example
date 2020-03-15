@@ -43,3 +43,6 @@ python server.py
 └─utils                           # 工具类，比如：验证码生成、IP地址转换
 ```
 
+## 其他
+Author : [caizhanjin](https://github.com/caizhanjin)
+Email : caizhanjin@qq.com
